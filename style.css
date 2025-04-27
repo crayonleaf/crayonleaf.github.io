@@ -1,0 +1,120 @@
+HTML,
+BODY,
+* {
+    cursor: url("cursor.cur"), auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ccccff;
+    text-align: center;
+    font-size: 14pt;
+}
+
+hr {
+    width: 85%;
+    max-width: 1078px;
+    border-top: 5px pink ridge;
+}
+
+::selection {
+    background: pink;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+li {
+    padding-left: 16px;
+}
+
+li::before {
+    content: "❤";
+    padding-right: 8px;
+    color: red;
+}
+
+ul>ul {
+    margin-left: 50px;
+}
+
+b,
+strong {
+    color: red;
+}
+
+u {
+    text-decoration-color: red;
+}
+
+a {
+    color: deeppink;
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    color: darksalmon;
+}
+
+h2 {
+    color: red;
+}
+
+#quote {
+font-style: italic;
+font-weight: bold;
+text-decoration: underline;
+}
+
+#counter {
+width: fit-content;
+margin: auto;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.nav {
+    width: fit-content;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navlink {
+    width: 100px;
+    height: 42px;
+    background-image: url('https://i.postimg.cc/vBZy2d7H/43.jpg');
+    padding-top: 8px;
+}
+
+#footer {
+font-size: smaller;
+width: 85%;
+max-width: 1078px;
+margin: auto;
+margin-top: 50px;
+border: 5px pink ridge;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+div.container {
+    text-align: center;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crayon Leaf</title>
+    <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/PxVjBFKb/flowerico.png">
+
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="freezeframe.js"></script>
+  </head>
+  <body>
+
+<h1><img class="animated" src="https://i.postimg.cc/fy6hbtGJ/heart.gif" alt=""> Crayon Leaf's Homepage!! <img class="animated" src="https://i.postimg.cc/fy6hbtGJ/heart.gif" alt=""></h1>
+
+<p>gif animation toggle:
+<button class="start">⏵</button>
+<button class="stop">⏸</button>
+</p>
+
+<hr>
+
+<img class="animated" src="cl1.gif"  alt="Pony Town gif of flying Crayon Leaf">
+
+<p id="quote">#quote</p>
+
+<hr>
+
+<h2>Welcome</h2>
+<p>My name is Crayon Leaf!<br>My favorite color is periwinkle!<br>I love everything cute, pastel and squeaky!<br>I am friendly and open for any conversation!<br>I wish to have a balloon star from the sky!</p>
+
+<div class="container">
+<ul>I really love:
+<li>Ponies and furries</li>
+<li>Creating, coding and writing</li>
+<li>Everything cute, soft, pastel and squeaky!</li>
+</ul>
+</div>
+
+<p>Chat me on Discord: @crayonleaf<br>Don't worry about my main language being Polish, I am sure my English is passable.. Probably! x3</p>
+
+<div class="nav">
+<div class="navlink"><a href="gallery">Gallery</a></div>
+<!--
+<div class="navlink"><a href="">Link</a></div>
+<div class="navlink"><a href="">Link</a></div>
+<div class="navlink"><a href="">Link</a></div>
+<div class="navlink"><a href="">Link</a></div>
+<div class="navlink"><a href="">Link</a></div>
+-->
+</div>
+<div id="footer">
+
+<p>Crayon Leaf's site! :D</p>
+
+</div>
+
+
+<!-- freezeframe script for pausing gifs -->
+<script>
+const manual = new Freezeframe('.animated', {
+  trigger: false
+});
+
+document
+  .querySelector('.start')
+  .addEventListener('click', () => {
+    manual.start();
+  });
+
+document
+  .querySelector('.stop')
+  .addEventListener('click', () => {
+    manual.stop();
+  });
+</script>
+<!--end of freezeframe script for pausing gifs-->
+
+<!-- quote randomizer -->
+<script>
+window.onload = replace;
+
+var words = {
+  quote: [
+"“Pouncing on the plushies.” —Crayon Leaf",
+"“Do you want the balloon star?” —Crayon Leaf",
+"“Don't ya feel nostalgic when jumping on the bouncy castle?” —Crayon Leaf",
+"“Pony is Pony is Pony is Pony!!” ―Crayon Leaf",
+"“Squeaks you!” ―Crayon Leaf",
+"“Crayons? Sure! I will draw you a leaf.” ―Crayon Leaf",
+"“Have you seen some green pony around? She stole my plushie! Grrrr!” ―Crayon Leaf",
+"“*POOF* NOW I AM A PLUSHIE PONY!” ―Crayon Leaf",
+"“*POOF* NOW I AM A BALLOON PONY!” ―Crayon Leaf",
+"“Hi new friend! Nice to meet ya!! <3” ―Crayon Leaf",
+
+/* Go ahead and change these quotes or add new ones. */
+
+]
+};
+
+function replace() {
+  let textbox = document.getElementById("quote");
+  var text = textbox.innerHTML;
+  for (const [key, value] of Object.entries(words)) {
+    text = text.replace(
+      `#${key}`,
+      value[Math.floor(Math.random() * value.length)]
+    );
+  }
+  textbox.innerHTML = text;
+}</script>
+<!-- end of quote randomizer -->
+</body>
+</html>
